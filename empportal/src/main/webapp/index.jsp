@@ -1,4 +1,4 @@
-<%@taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
@@ -44,10 +44,10 @@
 						<td><c:out value="${emp.phone}" /></td>
 						
 						<td>
-						<a href="editdoctorform/<c:out value="${emp.empid}"/>"
+						<a href="editEmpForm/<c:out value="${emp.empid}"/>"
 							class="btn btn-warning">Edit</a> 
 						
-						<a href="deletedoctor/<c:out value="${emp.empid}"/>"
+						<a href="deleteemp/<c:out value="${emp.empid}"/>"
 							class="btn btn-danger">Delete</a></td>
 					</tr>
 				</c:forEach>

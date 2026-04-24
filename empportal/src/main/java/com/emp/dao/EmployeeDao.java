@@ -27,8 +27,8 @@ public class EmployeeDao {
 	// ✅ UPDATE using PreparedStatement
 	public int update(Employee emp) {
 		String sql = "UPDATE Employee67 SET firstname=?, lastname=?, age=?, salary=?,phone=? WHERE empid=?";
-		return template.update(sql, emp.getFirstname(), emp.getLastname(), emp.getAge(), emp.getEmpid(),
-				emp.getSalary(), emp.getPhone());
+		return template.update(sql, emp.getFirstname(), emp.getLastname(), emp.getAge(),
+				emp.getSalary(), emp.getPhone(),emp.getEmpid());
 	}
 
 	// ✅ DELETE using PreparedStatement
