@@ -1,23 +1,24 @@
 Employee Portal – Spring MVC + JDBC (JdbcTemplate + JSP)
-🔗 Project Repository
+**🔗 Project Repository**
 
 https://github.com/srikanthjava91/vcube-javaissimple/tree/main
 
-🚀 Project Overview
-
+**🚀 Project Overview**
 The Employee Portal is a Spring MVC web application that performs CRUD operations using Spring JDBC (JdbcTemplate) and displays data using JSP (Java Server Pages).
 
 This project demonstrates a complete end-to-end web flow:
 
 User → JSP (UI) → Controller → Service/DAO → Database → Response → JSP
 
-🛠️ Tech Stack
+🛠️ **Tech Stack**
 Backend: Java, Spring Core, Spring MVC, Spring JDBC
 Frontend (UI): JSP, HTML, CSS
 Database: MySQL
 Build Tool: Maven
 Server: Apache Tomcat
-📂 Project Structure
+
+
+**📂 Project Structure**
 com.vcube.employee
  ├── controller        → Handles HTTP requests
  ├── dao               → JdbcTemplate DB operations
@@ -28,7 +29,9 @@ com.vcube.employee
       │    ├── views   → JSP files
       │    └── web.xml
       └── static       → CSS/JS (if any)
-⚙️ Features
+
+      
+**⚙️ Features**
 ➕ Add Employee (JSP Form)
 📋 View All Employees (JSP Table)
 ✏️ Update Employee
@@ -45,7 +48,9 @@ CREATE TABLE employee (
     department VARCHAR(50),
     salary DOUBLE
 );
-⚙️ DataSource Configuration (Java Config)
+
+
+**⚙️ DataSource Configuration (Java Config)**
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "com.vcube.employee")
@@ -74,7 +79,9 @@ public class AppConfig {
         return vr;
     }
 }
-🌐 Application Flow (MVC)
+
+
+**🌐 Application Flow (MVC)**
 
 1️⃣ User interacts with JSP page (UI)
 2️⃣ Request goes to Controller
@@ -83,12 +90,14 @@ public class AppConfig {
 5️⃣ Response sent back to Controller
 6️⃣ Controller returns data to JSP View
 
-🧠 Sample DAO Method
+**🧠 Sample DAO Method**
 public List<Employee> getAllEmployees() {
     String sql = "SELECT * FROM employee";
     return jdbcTemplate.query(sql, new EmployeeRowMapper());
 }
-🧾 Sample JSP (View)
+
+
+**🧾 Sample JSP (View)**
 <c:forEach var="emp" items="${employees}">
     <tr>
         <td>${emp.id}</td>
@@ -98,14 +107,14 @@ public List<Employee> getAllEmployees() {
         <td>${emp.salary}</td>
     </tr>
 </c:forEach>
-▶️ How to Run
+
+**▶️ How to Run**
 Clone the repository
 Import as Maven Project
 Configure MySQL credentials in DataSource
 Deploy on Tomcat Server
 
-Open browser:
-
+**Open browser:**
 http://localhost:8080/employee-portal/
 🎯 Learning Outcomes
 Spring MVC architecture (Controller → View → DAO)
@@ -124,8 +133,7 @@ Java Full Stack Trainer
 
 💡 Note
 
-This project is ideal for:
-
+**This project is ideal for:**
 Beginners learning Spring MVC
 Students preparing for interviews
 Understanding real-time web application flow
